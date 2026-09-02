@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-black: #0A0A0F;
+    --color-charcoal: #1B1B24;
+    --color-gold: #C9A24B;
+    --color-moon-yellow: #F3E3A0;
+    --color-orchid-purple: #7B5FA6;
+    --color-text: #F5F1E8;
+  }
+
+  body {
+    background-color: var(--color-black);
+    color: var(--color-text);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-serif-luxury {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .font-script-luxury {
+    font-family: 'Great Vibes', cursive;
+  }
+}
+
+/* Custom Utilities for Dark Luxury Aesthetic */
+.bg-dark-charcoal {
+  background-color: #1B1B24;
+}
+
+.bg-dark-black {
+  background-color: #0A0A0F;
+}
+
+.text-gold {
+  color: #C9A24B;
+}
+
+.text-moon-yellow {
+  color: #F3E3A0;
+}
+
+.border-gold {
+  border-color: #C9A24B;
+}
+
+.border-gold-30 {
+  border-color: rgba(201, 162, 75, 0.3);
+}
+
+.glass-card {
+  background: rgba(27, 27, 36, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 162, 75, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(201, 162, 75, 0.6);
+  box-shadow: 0 12px 36px -4px rgba(201, 162, 75, 0.15), 0 0 20px 0 rgba(123, 95, 166, 0.15);
+  transform: translateY(-4px);
+}
+
+.glass-nav {
+  background: rgba(10, 10, 15, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(201, 162, 75, 0.18);
+}
+
+.glow-ambient-purple {
+  background: radial-gradient(circle, rgba(123, 95, 166, 0.25) 0%, rgba(10, 10, 15, 0) 70%);
+}
+
+.glow-ambient-gold {
+  background: radial-gradient(circle, rgba(243, 227, 160, 0.15) 0%, rgba(10, 10, 15, 0) 70%);
+}
+
+.glow-ambient-blue {
+  background: radial-gradient(circle, rgba(45, 60, 110, 0.22) 0%, rgba(10, 10, 15, 0) 70%);
+}
+
+/* Floating LINE Button Pulse Animation */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(201, 162, 75, 0.6), 0 0 15px rgba(201, 162, 75, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 0 14px rgba(201, 162, 75, 0), 0 0 25px rgba(243, 227, 160, 0.6);
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 162, 75, 0), 0 0 15px rgba(201, 162, 75, 0.4);
+    transform: scale(1);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2.8s infinite ease-in-out;
+}
+
+/* Subtle Shimmer for Gold Accents */
+@keyframes shimmer-gold {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F3E3A0 0%, #C9A24B 50%, #A67D28 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0A0F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2A2A38;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C9A24B;
+}
